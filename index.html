@@ -51,12 +51,17 @@
       ply-model="src:Duck.ply"
       position="0 1 -2"
       rotation="-90 0 90"
-      animation="
+      animation_first="
+        easing: linear;
         property: position;
-        from:-12 1 -8;
+        from: -12 1 -8;
         to: 12 1 -8;
-        dur: 8000;
-        loop:true;"
+        dur: 8000;"
+      
+      animation_second="
+        "easing: linear;
+        property: position;
+        from 
       ></a-entity>
 
       <a-entity 
