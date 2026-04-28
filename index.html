@@ -86,9 +86,59 @@ animation__turn2="
       ></a-entity>
 
       <a-entity 
-      ply-model="src:Shark.ply"
+      ply-model="src:degbuggres-9.ply"
       position="0 1 -2"
       rotation="-90 0 90"
+
+      animation__move1="
+    property: position;
+    from: -12 1 -8;
+    to: 12 1 6;
+    dur: 8000;
+    easing: linear;
+    startEvents: loaded, animationcomplete__move3;
+  "
+
+  animation__turn1="
+  property: rotation;
+  to: -90 -45 90;
+  dur: 800;
+  easing: linear;
+  startEvents: animationcomplete__move1;
+  "
+
+  animation__move2="
+    property: position;
+    from: 12 1 6;
+    to: -12 1 6;
+    dur: 8000;
+    easing: linear;
+    startEvents: animationcomplete__move1;
+  "
+animation__turn2="
+    property: rotation;
+    to: -90 -270 90;
+    dur: 800;
+    easing: linear;
+    startEvents: animationcomplete__move2;
+  "
+
+   animation__move3="
+    property: position;
+    from: -12 1 6;
+    to: -12 1 -8;
+    dur: 4000;
+    easing: linear;
+    startEvents: animationcomplete__move2;
+  "
+
+  animation__turn3="
+    property: rotation;
+    to: -90 0 90;
+    dur: 800;
+    easing: linear;
+    startEvents: animationcomplete__move3;
+  "
       ></a-entity>
 
       <a-entity 
