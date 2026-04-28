@@ -48,38 +48,47 @@
       ></a-entity>
 
       <a-entity 
-      ply-model="src:Duck.ply"
-      position="0 1 -2"
-      rotation="-90 0 90"
-      animation__first="
-        easing: linear;
-        property: position;
-        from: -12 1 -8;
-        to: 12 1 -8;
-        dur: 8000;
-        startEvents: loaded, animationcomplete_fourth"
-      animation__second="
-        easing: linear;
-        property: position;
-        from: 12 1 -8;
-        to:12 1 -4;
-        dur:4000;
-        startEvents: loaded, animationcomplete_first"
-      animation__third="
-        easing: linear;
-        property: position;
-        from: 12 1 -4;
-        to:-12 1 -4;
-        dur:8000;
-        startEvents: loaded, animationcomplete_second"
-      animation__fourth="
-        easing: linear;
-        property: position;
-        from: 12 1 -4;
-        to:-12 1 -8;
-        dur:4000;
-        startEvents: loaded, animationcomplete_3rd"
-      ></a-entity>
+  ply-model="src: Duck.ply"
+  position="0 1 -2"
+  rotation="-90 0 90"
+
+  animation__first="
+    property: position;
+    from: -12 1 -8;
+    to: 12 1 -8;
+    dur: 8000;
+    easing: linear;
+    startEvents: loaded, animationcomplete__fourth;
+  "
+
+  animation__second="
+    property: position;
+    from: 12 1 -8;
+    to: 12 1 -4;
+    dur: 4000;
+    easing: linear;
+    startEvents: animationcomplete__first;
+  "
+
+  animation__third="
+    property: position;
+    from: 12 1 -4;
+    to: -12 1 -4;
+    dur: 8000;
+    easing: linear;
+    startEvents: animationcomplete__second;
+  "
+
+  animation__fourth="
+    property: position;
+    from: -12 1 -4;
+    to: -12 1 -8;
+    dur: 4000;
+    easing: linear;
+    startEvents: animationcomplete__third;
+  "
+
+></a-entity>
 
       <a-entity 
       ply-model="src:Mapcorner1.ply"
